@@ -29,7 +29,7 @@
 ### ksu_susfs_bind
 - susfs 协助的 mount --bind
 - 仅 KernelSU 可用  
-- 需要被 susfs 修补过的内核以及对应的用户空间工具  
+- 需要被susfs修补过的内核以及对应的用户空间工具  
 - 兼容 Adaway  
 - 隐藏: **最佳，因为 SuSFS 处理卸载/取消挂载**
 
@@ -40,7 +40,7 @@
 - mount --bind
 - **兼容性最好**
 - 实际上在所有的管理器均能工作，但并未真正可用
-- 会泄露 bind mount, 泄露全局修改的 hosts 文件  
+- 会泄露bind mount, 泄露全局修改的 hosts 文件  
 - 当 APatch 处于 OverlayFS (默认模式) 时选择，因为其提供更好的兼容性。
 - 兼容 Adaway
 - 隐藏: 基本上没有隐藏, 需要辅助手段
@@ -62,7 +62,8 @@
 ## mode=4
 ### zn_hostsredirect
 - 通过 zygisk 注入 netd
-- 作者 aviraxp **推荐** 使用 - ```"Injection is much better than mount in this usecase"(在这种情况下，注入比挂载要好得多)```
+- 作者 aviraxp **推荐** 使用
+> *"Injection is much better than mount in this usecase"* <br> *"在这种情况下，注入比挂载要好得多"* <div align="right"><em>-- aviraxp</em></div>
 - 应该能在所有管理器上工作  
 - 需要:  
   - [ZN-hostsredirect](https://github.com/aviraxp/ZN-hostsredirect)  
@@ -78,7 +79,8 @@
 - 仅 KernelSU 可用
 - 仅能通过**手动切换**的方式启用  
 - 需要被susfs修补过的内核以及对应的用户空间工具  
-- 作者 simonpunk **不推荐** 使用 - ```"openredirect will take more CPU cycle as well.."(openredirect 也会消耗更多的CPU资源…)```
+- 作者 simonpunk **不推荐** 使用
+> *"openredirect will take more CPU cycle as well.."* <br> *"openredirect 也会消耗更多的CPU资源…"* <div align="right"><em>-- simonpunk</em></div>
 - 需要 SuSFS 1.5.1 及更高版本  
 - 兼容 Adaway 
 - 隐藏: 不错的方法，但可能会浪费更多CPU资源
