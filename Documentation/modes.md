@@ -62,13 +62,14 @@
 ## mode=4
 ### zn_hostsredirect
 - zygisk netd injection
-- usage is **encouraged** by the author (aviraxp) - ```"Injection is much better than mount in this usecase"```
+- usage is **encouraged** by the author (aviraxp)
+> *"Injection is much better than mount in this usecase"* <div align="right"><em>-- aviraxp</em></div>
 - should work on all managers  
 - Requires:  
   - [ZN-hostsredirect](https://github.com/aviraxp/ZN-hostsredirect)  
   - [ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)  
 - No Adaway compatibility  
-- Hiding: good method as there’s no mount at all, but it depends on other modules
+- Hiding: good method as there's no mount at all, but it depends on other modules
 
 ---
 
@@ -78,7 +79,8 @@
 - KernelSU only 
 - **OPT-IN** only 
 - Requires susfs-patched kernel and userspace tool  
-- usage is **discouraged** by author (simonpunk) - ```"openredirect will take more CPU cycle as well.."```
+- usage is **discouraged** by author (simonpunk)
+> *"openredirect will take more CPU cycle as well.."* <div align="right"><em>-- simonpunk</em></div>
 - Requires SuSFS 1.5.1 or later  
 - Adaway compatible
 - Hiding: good method but will likely waste more cpu cycles
@@ -90,7 +92,7 @@
 - KernelSU try_umount assisted mount --bind
 - Requires source modification: [reference](https://github.com/tiann/KernelSU/commit/2b2b0733d7c57324b742c017c302fc2c411fe0eb)  
 - Supported on KernelSU NEXT 12183+ [reference](https://github.com/rifsxd/KernelSU-Next/commit/9f30b48e559fb5ddfd088c933af147714841d673)
-- **WARNING**: Conflicts with SuSFS. You don’t need this if you can implement SuSFS.
+- **WARNING**: Conflicts with SuSFS. You don't need this if you can implement SuSFS.
 - Adaway compatible
 - Hiding: good method but you can probably just implement susfs.
 
